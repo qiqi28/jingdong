@@ -1,0 +1,593 @@
+    body {
+        height: 5290px;
+        width: 100%;
+        max-width: 640px;
+        min-width: 320px;
+        margin: 0 auto;
+        font-size: 14px;
+        color: #ccc;
+        background-color: #EEEEEE;
+        line-height: 1.5;
+        font-family: -apple-system, Helvetica, sans-serif;
+    }
+    
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    ul li {
+        list-style: none;
+    }
+    
+    ol {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .header {
+        display: flex;
+        height: 45px;
+    }
+    
+    .header li {
+        float: left;
+        height: 45px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        line-height: 45px;
+    }
+    
+    .close {
+        width: 8%;
+    }
+    
+    .close img {
+        width: 10px;
+        vertical-align: middle;
+    }
+    
+    .logo {
+        width: 10%;
+    }
+    
+    .logo img {
+        width: 30px;
+        vertical-align: middle;
+    }
+    
+    .header li:nth-child(3) {
+        width: 57%;
+    }
+    
+    .header li:nth-child(4) {
+        width: 25%;
+        background-color: #F63515;
+    }
+    
+    .header li:nth-child(4) a {
+        color: #fff;
+    }
+    
+    .search_wrap {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 44px;
+        min-width: 320px;
+        max-width: 640px;
+        background-color: #990000;
+        z-index: 999;
+    }
+    /*开始滚动*/
+    
+    .search_wrap_active {
+        position: fixed;
+        top: 8px;
+    }
+    
+    .search-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 44px;
+        width: 40px;
+    }
+    
+    .search-btn::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 18px;
+        background: url(../images/s-btn.png) no-repeat;
+        background-size: 20px 18px;
+        margin: 14px 0 0 15px;
+    }
+    
+    .search-login {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 44px;
+        width: 40px;
+        color: #fff;
+        line-height: 44px;
+    }
+    
+    .search {
+        position: relative;
+        height: 30px;
+        margin: 0 50px;
+        border-radius: 15px;
+        margin-top: 7px;
+        background-color: #fff;
+    }
+    
+    .jd-icon {
+        width: 20px;
+        height: 15px;
+        position: absolute;
+        top: 8px;
+        left: 13px;
+        background: url(../images/jd.png);
+        background-size: 20px 15px;
+    }
+    
+    .jd-icon::after {
+        content: '';
+        position: absolute;
+        right: -8px;
+        top: 0;
+        display: block;
+        width: 1px;
+        height: 15px;
+        background-color: #ccc;
+    }
+    
+    .sou {
+        position: absolute;
+        top: 8px;
+        left: 50px;
+        width: 18px;
+        height: 15px;
+        background: url(../images/jd-sprites.png) no-repeat -81px 0;
+        background-size: 200px;
+    }
+    
+    .banner {
+        width: 95%;
+        overflow: hidden;
+        position: relative;
+        margin: 5px 20px 0 10px;
+    }
+    
+    .swipe {
+        width: 1000%;
+        -webkit-transform: translateX(-10%);
+        transform: translateX(-10%);
+    }
+    
+    .swipe li {
+        width: 10%;
+        float: left;
+    }
+    
+    .swipe li a {
+        display: block;
+        width: 100%;
+    }
+    
+    .swipe li a img {
+        width: 100%;
+        display: block;
+    }
+    
+    .swipe-btn-list {
+        position: absolute;
+        bottom: 6px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .swipe-btn-list li {
+        width: 6px;
+        height: 6px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 10px;
+    }
+    
+    .swipe-btn-list li:first-child {
+        margin-left: 0;
+    }
+    
+    .swipe-btn-list li .now {
+        background: #fff;
+    }
+    
+    .nav {
+        margin: 0 10px;
+        height: 180px;
+        background-color: #fff;
+    }
+    
+    nav a {
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+    
+    nav a img {
+        width: 40px;
+        margin: 10px 0;
+    }
+    
+    nav a span {
+        display: block;
+    }
+    
+    .seckill {
+        margin: 10px;
+        padding-top: 10px;
+        background-color: #fff;
+    }
+    
+    .seckill strong {
+        font-weight: normal;
+        float: left;
+        display: block;
+        height: 15px;
+        margin-top: 2px;
+        margin-right: 12px;
+        margin-left: 5px;
+        font-family: PingFangSC-Semibold;
+        font-size: 15px;
+        color: #333;
+        line-height: 15px;
+    }
+    
+    .seckill p {
+        display: inline;
+        float: left;
+        border-radius: 12px;
+        font-size: 12px;
+        color: #ff2727;
+    }
+    
+    .day {
+        display: block;
+        float: left;
+        width: 14px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        margin: 0 2px;
+        margin-left: 10px;
+        background-color: red;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 13px;
+    }
+    
+    .hour {
+        display: block;
+        float: left;
+        width: 14px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        margin: 0 2px;
+        background-color: red;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 13px;
+    }
+    
+    .minute {
+        display: block;
+        float: left;
+        width: 14px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        margin: 0 2px;
+        background-color: red;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 13px;
+    }
+    
+    .second {
+        display: block;
+        float: left;
+        width: 14px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        margin: 0 2px;
+        background-color: red;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 13px;
+    }
+    
+    .seckill i {
+        float: left;
+        display: block;
+        width: 10px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-style: normal;
+        color: red;
+        font-weight: bold;
+    }
+    
+    .seckill a {
+        float: right;
+        font-size: 12px;
+        color: #F63515;
+    }
+    
+    .seckill ul {
+        display: flex;
+        width: 100%;
+        height: 90px;
+        margin: 5px 0;
+        padding-bottom: 5px;
+    }
+    
+    .seckill ul li {
+        flex: 1;
+        float: left;
+        height: 80px;
+        margin-top: 7px;
+    }
+    
+    .seckill ul li span {
+        display: block;
+        height: 12px;
+        font-family: JDZhengHT-EN-Regular;
+        margin-top: 7px;
+        display: block;
+        color: #f2270c;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .seckill ul li img {
+        width: 100%;
+        display: block;
+    }
+    
+    .certify a {
+        width: 100%;
+    }
+    
+    .certify a img {
+        display: block;
+        width: 100%;
+    }
+    
+    .certify-goods {
+        display: flex;
+        margin: 0 10px;
+        flex: 1;
+        background-color: #fff;
+    }
+    
+    .certify-1 .certify-2 {
+        flex: 1;
+    }
+    
+    .certify-1-1 p {
+        color: #333;
+        font-weight: 700;
+        font-size: 18x;
+        height: 18px;
+        line-height: 18px;
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        margin-left: 10px;
+    }
+    
+    .certify-1-1 span {
+        width: 100%;
+        color: #000;
+        overflow: hidden;
+        font-size: 12px;
+        height: 12px;
+        line-height: 12px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        text-align: justify;
+        margin-left: 10px;
+    }
+    
+    .certify-2-1 p {
+        color: #333;
+        font-weight: 700;
+        font-size: 18x;
+        height: 18px;
+        line-height: 18px;
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        margin-left: 10px;
+    }
+    
+    .certify-2-1 span {
+        width: 100%;
+        color: #000;
+        overflow: hidden;
+        font-size: 12px;
+        height: 12px;
+        line-height: 12px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        text-align: justify;
+        margin-left: 10px;
+    }
+    
+    .certify-1-2 .certify-2-2 {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .certify-1-2 img {
+        width: 50%;
+        float: left;
+        display: block;
+    }
+    
+    .certify-2-2 img {
+        width: 40%;
+        float: left;
+        display: block;
+    }
+    
+    .pants {
+        background-color: #fff;
+        margin: 0 10px;
+        padding: 10px 0;
+        display: flex;
+    }
+    
+    .pants p {
+        color: #333;
+        font-weight: 700;
+        font-size: 18x;
+        height: 18px;
+        line-height: 18px;
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        margin-left: 10px;
+    }
+    
+    .pants span {
+        width: 100%;
+        color: #000;
+        overflow: hidden;
+        font-size: 12px;
+        height: 12px;
+        line-height: 12px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        text-align: justify;
+        margin-left: 10px;
+    }
+    
+    .pants img {
+        width: 80%;
+        margin: auto;
+        display: block;
+    }
+    
+    .more {
+        margin: 10px 10px;
+    }
+    
+    .more p {
+        color: #333;
+        font-weight: 700;
+        font-size: 18x;
+        height: 18px;
+        line-height: 18px;
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        margin-left: 10px;
+    }
+    
+    .more span {
+        width: 100%;
+        color: #000;
+        overflow: hidden;
+        font-size: 12px;
+        height: 12px;
+        line-height: 12px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        text-align: justify;
+        margin-left: 10px;
+    }
+    
+    .more-goods {
+        margin: 0;
+        padding: 10px 0;
+        display: flex;
+        flex: 1;
+        background-color: #fff;
+    }
+    
+    .books {
+        background-color: #fff;
+        margin: 0;
+        padding: 10px 0;
+        display: flex;
+    }
+    
+    .books-1 {
+        padding-left: 10px;
+        flex: 1;
+    }
+    
+    .books img {
+        width: 80%;
+        margin: auto;
+        display: block;
+    }
+    
+    .shopping {
+        width: 100%;
+        margin: 0 10px;
+    }
+    
+    .shopping1 {
+        float: left;
+        width: 48%;
+    }
+    
+    .shopping1:nth-child(2n-1) {
+        margin-right: 10px;
+    }
+    
+    .shopping1 span {
+        height: 30px;
+        font-size: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        color: #1a1a1a;
+        margin-top: 5px;
+        line-height: 16px;
+        margin-bottom: 3px;
+        padding: 0 4px;
+    }
+    
+    .shopping1 p {
+        font-size: 15px;
+        color: #F63515;
+    }
+    
+    .shopping1 img {
+        width: 100%;
+    }
